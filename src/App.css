@@ -1,0 +1,45 @@
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+select{
+    width: 100%; 
+}
+
+.card{
+    margin-bottom: 1.2em;
+}
+
+.card-main .card-block{
+    background: #f9f9f9;
+}
+
+.button-status{
+    margin-bottom: 1em;
+}
+
+.issue-number{
+    color: #888;
+}
+
+.issue-text i{
+    margin-right: .5em;
+}
+.issue-text-first{ 
+    margin-bottom: .7em;
+}
+
+.issue-action-buttons{
+    padding: .5em 1.4em;
+    margin-right: .25em;
+}
+
+ul{
+    padding: 0;
+}
