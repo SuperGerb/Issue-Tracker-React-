@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class Personalise extends React.Component {
+class PersonalisationField extends Component {
 
     handleChangeInput = (event) => {
         this.props.onChangeInput(event.target.value, event.target.name);
@@ -9,7 +9,7 @@ class Personalise extends React.Component {
     render() {
         return (
             <div>
-                <i>Personalise this tool by entering your name: </i>
+                <i>PersonalisationField this tool by entering your name: </i>
                 <input type="text" onChange={this.handleChangeInput} name="usersName" />
                 <br />
                 <br />
@@ -18,4 +18,4 @@ class Personalise extends React.Component {
     }
 }
 
-export default Personalise;
+export default PersonalisationField;
