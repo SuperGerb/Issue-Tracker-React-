@@ -9,8 +9,8 @@ class PersonalisationField extends Component {
     render() {
         return (
             <div>
-                <i>PersonalisationField this tool by entering your name: </i>
-                <input type="text" onChange={this.handleChangeInput} name="usersName" />
+                <i>Personalise this tool by entering your name: </i>
+                <input type="text" onChange={this.handleChangeInput} name="user" />
                 <br />
                 <br />
             </div>

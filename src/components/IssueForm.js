@@ -30,7 +30,7 @@ class IssueForm extends Component {
         event.preventDefault();
         
         //Set the default level of severity to "low":
-        var levelOfSeverity = this.state.severity != "" ? this.state.severity : "low";
+        var levelOfSeverity = this.state.severity !== "" ? this.state.severity : "low";
         
         var currentTicket = {
             issueId: this.state.issueId,

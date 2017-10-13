@@ -1,5 +1,5 @@
-import Ticket from './Ticket';
 import React, { Component } from 'react';
+import Ticket from './Ticket';
 
 //TODO: change to a functional component since it has no local state.
 
@@ -7,18 +7,24 @@ class TicketList extends Component {
     //Receives props from App.js 
 
     render() {
-        const tickets = this.props.ticketList.map(function (ticket, index) {
+        const onCloseTicket = this.props.handleCloseTicket;
+
+        //Take the ticketList and for each ticket object in the array, display the ticket (pass the respective ticket state info to each):
+        const tickets = this.props.ticketList.map(function (value, index) {
             return (
                 <li key={index} className="card card-outline-danger">
-                    {/* Pass each ticket object as props to Ticket.js: */}
-                    <Ticket ticket={ticket} />
+                    <Ticket
+                        ticketInfo={value}
+                        onCloseTicket={onCloseTicket}
+                    />
                 </li>
             )
         })
 
-
         return (
-            <ul id="ticketsList">{tickets}</ul>
+            <ul id="ticketsList">
+                {tickets}
+            </ul>
         )
     }
 }

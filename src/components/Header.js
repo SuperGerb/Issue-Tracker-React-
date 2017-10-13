@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 //(Ie just a function (vs a class-based component)
 
 const Header=(props)=>(
-    <h1>{props.usersName}'s JS Issue Tracker</h1>
+    <h1>{props.user}'s JS Issue Tracker</h1>
 )
 
 export default Header;

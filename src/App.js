@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+//import logo from './logo.svg';
 import './App.css';
 import './font-awesome-4.7.0/css/font-awesome.min.css';
 import PersonalisationField from './components/PersonalisationField';
@@ -12,7 +12,7 @@ class App extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            usersName: "Stephanie",
+            user: "Stephanie",
             ticketList: []
         };
     }
@@ -32,6 +32,11 @@ class App extends Component {
         });
     }
 
+    handleClosingOfTicket=(ticketId)=> {
+        console.log("Ticket to close: ", ticketId);
+        //Update state to close ticket
+    }
+
     //3. Render the UI:
     //Access state in the render method using this.state
     render() {
@@ -42,11 +47,14 @@ class App extends Component {
                         <PersonalisationField
                             onChangeInput={this.handleChangeInput} //A callback that will fire when the state is updated, ie onChangeInput
                         />
-                        <Header usersName={this.state.usersName} />
+                        <Header user={this.state.user} />
                         <IssueForm
                             onNewIssue={this.handleNewIssue} //A callback that will fire on form submit
                         />
-                        <TicketList ticketList={this.state.ticketList} />
+                        <TicketList
+                            ticketList={this.state.ticketList}
+                            handleCloseTicket={this.handleClosingOfTicket}
+                        />
                     </div>
                 </div>
             </div>
